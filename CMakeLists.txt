@@ -151,7 +151,7 @@ add_custom_target(${PROJECT_NAME}_ALL
         COMMENT "Build both M4 and M7 parts"
         )
 
-find_program(STM32_PROGRAMMER_PATH "C:/ST/STM32CubeIDE_1.8.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.cubeprogrammer.win32_1.6.0.202101291314/tools/bin/STM32_Programmer_CLI.exe")
+find_program(STM32_PROGRAMMER_PATH "C:/ST/STM32CubeIDE_1.10.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.cubeprogrammer.win32_2.0.300.202205161323/tools/bin/STM32_Programmer_CLI.exe")
 
 add_custom_target(${PROJECT_NAME}_FLASH
         ${STM32_PROGRAMMER_PATH} -c port=swd shared -d $<TARGET_FILE:${PROJECT_NAME}_CM7.elf> -d $<TARGET_FILE:${PROJECT_NAME}_CM4.elf> -rst
