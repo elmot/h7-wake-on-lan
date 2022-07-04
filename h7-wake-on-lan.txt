@@ -1,6 +1,6 @@
 Configuration	h7-wake-on-lan
 STM32CubeMX 	6.6.0
-Date	07/03/2022
+Date	07/04/2022
 MCU	STM32H745ZITx
 
 
