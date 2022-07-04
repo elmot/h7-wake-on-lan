@@ -160,5 +160,6 @@ add_custom_target(${PROJECT_NAME}_FLASH
         )
 
 # lwip(ethernet)-specific stuff
+target_compile_definitions(${PROJECT_NAME}_CM7.elf PRIVATE HTTPD_FSDATA_FILE=\"fsdata_custom.inc\")
 target_compile_definitions(${PROJECT_NAME}_CM7.elf PRIVATE DATA_IN_D2_SRAM)
 target_link_options(${PROJECT_NAME}_CM7.elf PRIVATE -L${CMAKE_SOURCE_DIR}/CM7)

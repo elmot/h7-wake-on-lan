@@ -111,7 +111,7 @@ Firmware Package Name and Version : STM32Cube FW_H7 V1.10.0
 
 Code Generation Settings : 
 STM32Cube MCU packages and embedded software packs : Copy only the necessary library files
-Generate peripheral initialization as a pair of '.c/.h' files per peripheral : No
+Generate peripheral initialization as a pair of '.c/.h' files per peripheral : Yes
 Backup previously generated files when re-generating : No
 Delete previously generated files when not re-generated : Yes
 Set all free pins as analog (to optimize the power consumption) : No

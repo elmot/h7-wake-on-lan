@@ -325,9 +325,19 @@
 			<locationURI>PARENT-1-PROJECT_LOC/Middlewares/Third_Party/LwIP/src/netif/ppp/eui64.c</locationURI>
 		</link>
 		<link>
+			<name>Middlewares/Third_Party/LwIP/fs.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Middlewares/Third_Party/LwIP/src/apps/http/fs.c</locationURI>
+		</link>
+		<link>
 			<name>Middlewares/Third_Party/LwIP/fsm.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Middlewares/Third_Party/LwIP/src/netif/ppp/fsm.c</locationURI>
+		</link>
+		<link>
+			<name>Middlewares/Third_Party/LwIP/httpd.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Middlewares/Third_Party/LwIP/src/apps/http/httpd.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/Third_Party/LwIP/icmp.c</name>
