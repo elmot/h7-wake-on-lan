@@ -49,3 +49,14 @@ Steps to make a similar project
 9. Try to build both executables. If something goes wrong, fix your `CMakeLists.txt` and sources.
 10. Click `Debug` for both executables. The firmware for both kernels should be flashed and started.
 11. Enjoy your newly-created project.
+
+Ethernet support(lwip)
+=============
+
+[Follow the guide with respect that we're working with CLion](https://community.st.com/s/article/How-to-create-project-for-STM32H7-with-Ethernet-and-LwIP-stack-working)
+
+Notes:
+---
+
+* Additional memory mapping is done via [user-defined linker script](CM7/STM32H745ZITX_USER.ld)
+* Some lines a

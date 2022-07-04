@@ -53,6 +53,8 @@
 #define ETH_RX_BUFFER_SIZE 1536
 /*----- Value in opt.h for MEM_ALIGNMENT: 1 -----*/
 #define MEM_ALIGNMENT 4
+/*----- Default Value for MEM_SIZE: 1600 ---*/
+#define MEM_SIZE 16360
 /*----- Default Value for H7 devices: 0x30044000 -----*/
 #define LWIP_RAM_HEAP_POINTER 0x30044000
 /*----- Value supported for H7 devices: 1 -----*/
@@ -74,7 +76,7 @@
 /*----- Value in opt.h for TCPIP_THREAD_STACKSIZE: 0 -----*/
 #define TCPIP_THREAD_STACKSIZE 1024
 /*----- Value in opt.h for TCPIP_THREAD_PRIO: 1 -----*/
-#define TCPIP_THREAD_PRIO 24
+#define TCPIP_THREAD_PRIO osPriorityNormal
 /*----- Value in opt.h for TCPIP_MBOX_SIZE: 0 -----*/
 #define TCPIP_MBOX_SIZE 6
 /*----- Value in opt.h for SLIPIF_THREAD_STACKSIZE: 0 -----*/
@@ -93,10 +95,6 @@
 #define DEFAULT_ACCEPTMBOX_SIZE 6
 /*----- Value in opt.h for RECV_BUFSIZE_DEFAULT: INT_MAX -----*/
 #define RECV_BUFSIZE_DEFAULT 2000000000
-/*----- Default Value for LWIP_HTTPD: 0 ---*/
-#define LWIP_HTTPD 1
-/*----- Value in opt.h for HTTPD_USE_CUSTOM_FSDATA: 0 -----*/
-#define HTTPD_USE_CUSTOM_FSDATA 1
 /*----- Value in opt.h for LWIP_STATS: 1 -----*/
 #define LWIP_STATS 0
 /*----- Value in opt.h for CHECKSUM_GEN_IP: 1 -----*/
@@ -115,16 +113,6 @@
 #define CHECKSUM_CHECK_TCP 0
 /*----- Value in opt.h for CHECKSUM_CHECK_ICMP6: 1 -----*/
 #define CHECKSUM_CHECK_ICMP6 0
-/*----- Default Value for ETHARP_DEBUG: LWIP_DBG_OFF ---*/
-#define ETHARP_DEBUG LWIP_DBG_ON
-/*----- Default Value for NETIF_DEBUG: LWIP_DBG_OFF ---*/
-#define NETIF_DEBUG LWIP_DBG_ON
-/*----- Default Value for ICMP_DEBUG: LWIP_DBG_OFF ---*/
-#define ICMP_DEBUG LWIP_DBG_ON
-/*----- Default Value for IP_DEBUG: LWIP_DBG_OFF ---*/
-#define IP_DEBUG LWIP_DBG_ON
-/*----- Default Value for TCP_DEBUG: LWIP_DBG_OFF ---*/
-#define TCP_DEBUG LWIP_DBG_ON
 /*-----------------------------------------------------------------------------*/
 /* USER CODE BEGIN 1 */
 
