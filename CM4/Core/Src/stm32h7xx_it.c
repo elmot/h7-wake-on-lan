@@ -51,6 +51,20 @@
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+_Noreturn void NMI_Handler(void);          // NOLINT
+_Noreturn void HardFault_Handler(void);    // NOLINT
+_Noreturn void MemManage_Handler(void);    // NOLINT
+_Noreturn void BusFault_Handler(void);     // NOLINT
+_Noreturn void UsageFault_Handler(void);   // NOLINT
+static void unused_defs__ () {
+    (void)unused_defs__;
+    (void) NMI_Handler;
+    (void) HardFault_Handler;
+    (void) MemManage_Handler;
+    (void) BusFault_Handler;
+    (void) UsageFault_Handler;
+    (void) DebugMon_Handler;
+}
 
 /* USER CODE END 0 */
 

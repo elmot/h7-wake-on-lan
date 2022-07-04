@@ -51,7 +51,24 @@
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+// disable warnings
+_Noreturn void NMI_Handler(void);          // NOLINT
+_Noreturn void HardFault_Handler(void);    // NOLINT
+_Noreturn void MemManage_Handler(void);    // NOLINT
+_Noreturn void BusFault_Handler(void);     // NOLINT
+_Noreturn void UsageFault_Handler(void);   // NOLINT
+static void unused_defs__ () {
+    (void)unused_defs__;
+    (void) NMI_Handler;
+    (void) HardFault_Handler;
+    (void) MemManage_Handler;
+    (void) BusFault_Handler;
+    (void) UsageFault_Handler;
+    (void) DebugMon_Handler;
+    (void) ETH_IRQHandler;
+    (void) TIM17_IRQHandler;
+}
+// end of disable warnings
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/

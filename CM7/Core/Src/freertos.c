@@ -26,6 +26,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "httpd.h"
+#include "udp.h"
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -125,11 +127,33 @@ void StartDefaultTask(void const * argument)
   MX_LWIP_Init();
   /* USER CODE BEGIN StartDefaultTask */
   httpd_init();
+  const char* message = "Hello UDP message!\n\r";
+
+  osDelay(1000);
+
+  ip_addr_t PC_IPADDR;
+  IP_ADDR4(&PC_IPADDR, 169, 254, 0, 2);
+
+  struct udp_pcb* my_udp = udp_new();
+  udp_connect(my_udp, &PC_IPADDR, 55151);
+  struct pbuf* udp_buffer = NULL;
+
   /* Infinite loop */
-  for(;;)
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "EndlessLoop"
+  while(1)
   {
-    osDelay(1);
+      osDelay(1000);
+    /* !! PBUF_RAM is critical for correct operation !! */
+      udp_buffer = pbuf_alloc(PBUF_TRANSPORT, strlen(message), PBUF_RAM);
+
+      if (udp_buffer != NULL) {
+          memcpy(udp_buffer->payload, message, strlen(message));
+          udp_send(my_udp, udp_buffer);
+          pbuf_free(udp_buffer);
+      }
   }
+#pragma clang diagnostic pop
   /* USER CODE END StartDefaultTask */
 }
 

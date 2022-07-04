@@ -138,8 +138,11 @@ void Error_Handler(void)
   /* User can add his own implementation to report the HAL error return state */
   __disable_irq();
   HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, GPIO_PIN_SET);
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "EndlessLoop"
   while (1){
   }
+#pragma clang diagnostic pop
   /* USER CODE END Error_Handler_Debug */
 }
 
